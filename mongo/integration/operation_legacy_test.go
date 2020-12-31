@@ -11,17 +11,17 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/internal/testutil/assert"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/integration/mtest"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/description"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/drivertest"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/wiremessage"
+	"github.com/vinllen/mongo-go-driver/bson"
+	"github.com/vinllen/mongo-go-driver/bson/primitive"
+	"github.com/vinllen/mongo-go-driver/internal/testutil/assert"
+	"github.com/vinllen/mongo-go-driver/mongo"
+	"github.com/vinllen/mongo-go-driver/mongo/integration/mtest"
+	"github.com/vinllen/mongo-go-driver/mongo/options"
+	"github.com/vinllen/mongo-go-driver/x/bsonx/bsoncore"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/description"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/drivertest"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/wiremessage"
 )
 
 func TestOperationLegacy(t *testing.T) {

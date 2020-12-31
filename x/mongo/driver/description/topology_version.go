@@ -9,8 +9,8 @@ package description
 import (
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
+	"github.com/vinllen/mongo-go-driver/bson/primitive"
+	"github.com/vinllen/mongo-go-driver/x/bsonx/bsoncore"
 )
 
 // TopologyVersion represents a software version.

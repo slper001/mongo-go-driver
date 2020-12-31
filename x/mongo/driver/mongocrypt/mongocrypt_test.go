@@ -16,10 +16,10 @@ import (
 	"path"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/mongocrypt/options"
+	"github.com/vinllen/mongo-go-driver/bson"
+	"github.com/vinllen/mongo-go-driver/bson/primitive"
+	"github.com/vinllen/mongo-go-driver/x/bsonx/bsoncore"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/mongocrypt/options"
 )
 
 const resourcesDir = "../../../../data/mongocrypt"

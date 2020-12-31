@@ -39,7 +39,7 @@ go get go.mongodb.org/mongo-driver/mongo
 When using a version of Go that does not support modules, the driver can be installed using `dep` by running
 
 ```bash
-dep ensure -add "go.mongodb.org/mongo-driver/mongo"
+dep ensure -add "github.com/vinllen/mongo-go-driver/mongo"
 ```
 
 -------------------------
@@ -49,9 +49,9 @@ To get started with the driver, import the `mongo` package, create a `mongo.Clie
 
 ```go
 import (
-    "go.mongodb.org/mongo-driver/mongo"
-    "go.mongodb.org/mongo-driver/mongo/options"
-    "go.mongodb.org/mongo-driver/mongo/readpref"
+    "github.com/vinllen/mongo-go-driver/mongo"
+    "github.com/vinllen/mongo-go-driver/mongo/options"
+    "github.com/vinllen/mongo-go-driver/mongo/readpref"
 )
 
 client, err := mongo.NewClient(options.Client().ApplyURI("mongodb://localhost:27017"))

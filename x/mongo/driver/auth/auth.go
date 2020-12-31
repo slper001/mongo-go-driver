@@ -11,11 +11,11 @@ import (
 	"errors"
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/address"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/description"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/operation"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/session"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/address"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/description"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/operation"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/session"
 )
 
 // AuthenticatorFactory constructs an authenticator.

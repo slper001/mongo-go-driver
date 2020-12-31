@@ -17,10 +17,10 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"go.mongodb.org/mongo-driver/internal/testutil/assert"
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/address"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/description"
+	"github.com/vinllen/mongo-go-driver/internal/testutil/assert"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/address"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/description"
 )
 
 func TestConnection(t *testing.T) {

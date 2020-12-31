@@ -12,13 +12,13 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/internal/testutil/assert"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/integration/mtest"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/session"
+	"github.com/vinllen/mongo-go-driver/bson"
+	"github.com/vinllen/mongo-go-driver/internal/testutil/assert"
+	"github.com/vinllen/mongo-go-driver/mongo"
+	"github.com/vinllen/mongo-go-driver/mongo/integration/mtest"
+	"github.com/vinllen/mongo-go-driver/mongo/options"
+	"github.com/vinllen/mongo-go-driver/mongo/readpref"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/session"
 )
 
 func TestSessionPool(t *testing.T) {

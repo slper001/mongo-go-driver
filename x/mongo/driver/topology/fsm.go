@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/address"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/description"
+	"github.com/vinllen/mongo-go-driver/bson/primitive"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/address"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/description"
 )
 
 var supportedWireVersions = description.NewVersionRange(2, 9)

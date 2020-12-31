@@ -10,8 +10,8 @@ import (
 	"bytes"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/internal/testutil/assert"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/description"
+	"github.com/vinllen/mongo-go-driver/internal/testutil/assert"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/description"
 )
 
 func TestSessionPool(t *testing.T) {

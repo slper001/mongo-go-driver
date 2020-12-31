@@ -16,15 +16,15 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/internal/testutil/assert"
-	testhelpers "go.mongodb.org/mongo-driver/internal/testutil/helpers"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/address"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/connstring"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/description"
+	"github.com/vinllen/mongo-go-driver/bson"
+	"github.com/vinllen/mongo-go-driver/bson/primitive"
+	"github.com/vinllen/mongo-go-driver/internal/testutil/assert"
+	testhelpers "github.com/vinllen/mongo-go-driver/internal/testutil/helpers"
+	"github.com/vinllen/mongo-go-driver/x/bsonx/bsoncore"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/address"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/connstring"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/description"
 )
 
 type response struct {

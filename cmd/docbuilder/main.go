@@ -16,8 +16,8 @@ var tmpl = `<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta http-equiv="refresh" content="5; url=https://godoc.org/go.mongodb.org/mongo-driver/{{.}}">
-        <meta name=go-import content="go.mongodb.org/mongo-driver git https://github.com/mongodb/mongo-go-driver.git">
-        <meta name="go-source" content="go.mongodb.org/mongo-driver https://github.com/mongodb/mongo-go-driver https://github.com/mongodb/mongo-go-driver/tree/master{/dir} https://github.com/mongodb/mongo-go-driver/blob/master{/dir}/{file}#L{line}">
+        <meta name=go-import content="github.com/vinllen/mongo-go-driver git https://github.com/mongodb/mongo-go-driver.git">
+        <meta name="go-source" content="github.com/vinllen/mongo-go-driver https://github.com/mongodb/mongo-go-driver https://github.com/mongodb/mongo-go-driver/tree/master{/dir} https://github.com/mongodb/mongo-go-driver/blob/master{/dir}/{file}#L{line}">
     </head>
     <body>
         Redirecting to docs...
@@ -59,7 +59,7 @@ func main() {
 		if !strings.HasPrefix(pkg.PkgPath, "go.mongodb.org") {
 			continue
 		}
-		dirs = append(dirs, strings.TrimPrefix(pkg.PkgPath, "go.mongodb.org/mongo-driver"))
+		dirs = append(dirs, strings.TrimPrefix(pkg.PkgPath, "github.com/vinllen/mongo-go-driver"))
 	}
 
 	err = os.MkdirAll(filepath.Join(destination, "mongo-driver"), os.ModeDir|os.FileMode(0755))

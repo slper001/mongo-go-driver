@@ -15,12 +15,12 @@ import (
 	"strings"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/internal/testutil/assert"
-	"go.mongodb.org/mongo-driver/mongo/integration/mtest"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/connstring"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/description"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/topology"
+	"github.com/vinllen/mongo-go-driver/bson"
+	"github.com/vinllen/mongo-go-driver/internal/testutil/assert"
+	"github.com/vinllen/mongo-go-driver/mongo/integration/mtest"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/connstring"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/description"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/topology"
 )
 
 const (

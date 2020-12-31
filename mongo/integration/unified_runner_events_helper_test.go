@@ -11,13 +11,13 @@ import (
 	"sync"
 	"time"
 
-	"go.mongodb.org/mongo-driver/event"
-	"go.mongodb.org/mongo-driver/internal/testutil/assert"
-	"go.mongodb.org/mongo-driver/mongo/integration/mtest"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/address"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/description"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/topology"
+	"github.com/vinllen/mongo-go-driver/event"
+	"github.com/vinllen/mongo-go-driver/internal/testutil/assert"
+	"github.com/vinllen/mongo-go-driver/mongo/integration/mtest"
+	"github.com/vinllen/mongo-go-driver/mongo/readpref"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/address"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/description"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/topology"
 )
 
 // Helper functions for the operations in the unified spec test runner that require assertions about SDAM and connection

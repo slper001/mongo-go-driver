@@ -6,9 +6,9 @@ import (
 	"net"
 	"time"
 
-	"go.mongodb.org/mongo-driver/event"
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/ocsp"
+	"github.com/vinllen/mongo-go-driver/event"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver"
+	"github.com/vinllen/mongo-go-driver/x/mongo/driver/ocsp"
 )
 
 // Dialer is used to make network connections.
