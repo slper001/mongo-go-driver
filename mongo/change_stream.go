@@ -389,10 +389,6 @@ func (cs *ChangeStream) createPipelineOptionsDoc() bsoncore.Document {
 		plDoc = bsoncore.AppendTimestampElement(plDoc, "startAtOperationTime", cs.options.StartAtOperationTime.T, cs.options.StartAtOperationTime.I)
 	}
 
-	if cs.options.MultiDbSelections != nil {
-		plDoc = bsoncore.AppendStringElement(plDoc, "MultiDbSelections", cs.options.MultiDbSelections)
-	}
-
 	if plDoc, cs.err = bsoncore.AppendDocumentEnd(plDoc, plDocIdx); cs.err != nil {
 		return nil
 	}
