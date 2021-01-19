@@ -100,6 +100,11 @@ func (cso *ChangeStreamOptions) SetStartAfter(sa interface{}) *ChangeStreamOptio
 	return cso
 }
 
+func (cso *ChangeStreamOptions) SetMultiDbSelections(mds string) *ChangeStreamOptions {
+	cso.MultiDbSelections = mds
+	return cso
+}
+
 // MergeChangeStreamOptions combines the given ChangeStreamOptions instances into a single ChangeStreamOptions in a
 // last-one-wins fashion.
 func MergeChangeStreamOptions(opts ...*ChangeStreamOptions) *ChangeStreamOptions {
@@ -129,7 +134,7 @@ func MergeChangeStreamOptions(opts ...*ChangeStreamOptions) *ChangeStreamOptions
 		if cso.StartAfter != nil {
 			csOpts.StartAfter = cso.StartAfter
 		}
-		if cso.MultiDbSelections != nil {
+		if cso.MultiDbSelections != "" {
 			csOpts.MultiDbSelections = cso.MultiDbSelections
 		}
 	}
