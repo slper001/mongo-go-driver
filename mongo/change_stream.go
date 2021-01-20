@@ -176,6 +176,7 @@ func newChangeStream(ctx context.Context, config changeStreamConfig, pipeline in
 	}
 	var pipelineArr bsoncore.Document
 	pipelineArr, cs.err = cs.pipelineToBSON()
+
 	cs.aggregate.Pipeline(pipelineArr)
 
 	if cs.err = cs.executeOperation(ctx, false); cs.err != nil {
@@ -225,6 +226,7 @@ func (cs *ChangeStream) executeOperation(ctx context.Context, resuming bool) err
 		if plArr, cs.err = cs.pipelineToBSON(); cs.err != nil {
 			return cs.Err()
 		}
+
 		cs.aggregate.Pipeline(plArr)
 	}
 
@@ -387,6 +389,10 @@ func (cs *ChangeStream) createPipelineOptionsDoc() bsoncore.Document {
 
 	if cs.options.StartAtOperationTime != nil {
 		plDoc = bsoncore.AppendTimestampElement(plDoc, "startAtOperationTime", cs.options.StartAtOperationTime.T, cs.options.StartAtOperationTime.I)
+	}
+
+	if cs.options.MultiDbSelections != "" {
+		plDoc = bsoncore.AppendStringElement(plDoc, "multiDbSelections", cs.options.MultiDbSelections)
 	}
 
 	if plDoc, cs.err = bsoncore.AppendDocumentEnd(plDoc, plDocIdx); cs.err != nil {
