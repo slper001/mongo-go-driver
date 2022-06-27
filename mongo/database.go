@@ -397,6 +397,49 @@ func (db *Database) ListCollectionNames(ctx context.Context, filter interface{},
 	return names, nil
 }
 
+func (db *Database) ListCollectionNamesExcludeView(ctx context.Context, filter interface{}, opts ...*options.ListCollectionsOptions) ([]string, error) {
+	opts = append(opts, options.ListCollections().SetNameOnly(true))
+
+	res, err := db.ListCollections(ctx, filter, opts...)
+	if err != nil {
+		return nil, err
+	}
+
+	defer res.Close(ctx)
+
+	names := make([]string, 0)
+	for res.Next(ctx) {
+		next := &bsonx.Doc{}
+		err = res.Decode(next)
+		if err != nil {
+			return nil, err
+		}
+
+		colType, err := next.LookupErr("type")
+		if err != nil {
+			return nil, err
+		}
+		if colType.String() != "collection" {
+			continue
+		}
+
+		elem, err := next.LookupErr("name")
+		if err != nil {
+			return nil, err
+		}
+
+		if elem.Type() != bson.TypeString {
+			return nil, fmt.Errorf("incorrect type for 'name'. got %v. want %v", elem.Type(), bson.TypeString)
+		}
+
+		elemName := elem.StringValue()
+		names = append(names, elemName)
+	}
+
+	res.Close(ctx)
+	return names, nil
+}
+
 // ReadConcern returns the read concern used to configure the Database object.
 func (db *Database) ReadConcern() *readconcern.ReadConcern {
 	return db.readConcern
