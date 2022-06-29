@@ -416,11 +416,15 @@ func (db *Database) ListCollectionNamesExcludeView(ctx context.Context, filter i
 		}
 
 		colType, err := next.LookupErr("type")
-		if err != nil {
+		switch err.(type) {
+		case bsonx.KeyNotFound:
+			// nothing to do
+		case nil:
+			if colType.String() != "collection" {
+				continue
+			}
+		default:
 			return nil, err
-		}
-		if colType.String() != "collection" {
-			continue
 		}
 
 		elem, err := next.LookupErr("name")
